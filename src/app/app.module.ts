@@ -11,6 +11,7 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 import { RecipeShortcutComponent } from './recipe-shortcut/recipe-shortcut.component';
 import { ListShortcutComponent } from './list-shortcut/list-shortcut.component';
 import { RecipeStepComponent } from './recipe-step/recipe-step.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RecipeStepComponent } from './recipe-step/recipe-step.component';
     MainFooterComponent,
     RecipeShortcutComponent,
     ListShortcutComponent,
-    RecipeStepComponent
+    RecipeStepComponent,
+    IngredientsComponent,
   ],
   imports: [
     BrowserModule,

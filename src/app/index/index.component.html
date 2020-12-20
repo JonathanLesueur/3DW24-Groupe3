@@ -10,19 +10,19 @@
             </div>
         </div>
         <div class="col">
-            <a routerLink="/new-list" class="primary-button">Nouvelle liste d'ingrédients</a>
+            <a href="#" class="primary-button">Nouvelle liste d'ingrédients</a>
         </div>
     </div>
     <div class="bloc bloc__recipes bg-whiteBackground">
         <h2>Mes dernières recettes</h2>
         <div class="list-container">
-            <recipe-shortcut *ngFor="let number of [1,2,3,4,5,6,7,8,9]" [recipeId]="number"></recipe-shortcut>
+            <recipe-shortcut *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]" [recipe]="number"></recipe-shortcut>
         </div>
     </div>
     <div class="bloc bloc__lists bg-whiteBackground">
         <h2>Les dernières listes</h2>
         <div class="list-container">
-            <list-shortcut *ngFor="let number of [1,2,3,4,5,6,7,8,9]" [listId]="number"></list-shortcut>
+            <list-shortcut *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]" [list]="number"></list-shortcut>
         </div>
     </div> 
 </div>
