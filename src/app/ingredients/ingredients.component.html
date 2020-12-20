@@ -10,11 +10,11 @@
             <button class="primary-button square-button add_button"> + </button>
             <div class="bloc_timer">
                 <div class="div_timer">
-                    <button class="primary-button square-button"> - </button>
+                    <button (click)="changeTime('-')" class="primary-button square-button"> - </button>
                     <div class="timer">
-                        <input type="number" placeholder="15" name="" id="" min="0">
+                        <input type="number" placeholder="15" name="" id="" min="0" value={{time}}>
                     </div>
-                    <button class="primary-button square-button"> + </button>
+                    <button (click)="changeTime('+')" class="primary-button square-button"> + </button>
                 </div>
                 <p>minutes</p>
             </div>
