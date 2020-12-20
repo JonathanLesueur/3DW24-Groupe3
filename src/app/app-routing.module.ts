@@ -14,7 +14,7 @@ const routes: Routes = [
     { path: 'my-recipes', component: RecipeComponent },
     { path: 'search-advanced', component: RecipeComponent },
     { path: 'login', component: RecipeComponent }
-  ];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

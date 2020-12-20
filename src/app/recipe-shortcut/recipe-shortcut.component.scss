@@ -5,6 +5,10 @@
     flex-direction: row;
     padding: 10px;
     border-bottom: 1px solid rgba(color(grayText), 0.2);
+    cursor: pointer;
+    &:hover {
+        background-color: color(primaryHover);
+    }
     .date {
         font-weight: 800;
         color: color(blackText);
