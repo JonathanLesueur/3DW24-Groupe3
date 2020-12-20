@@ -28,6 +28,6 @@ export class RecipeComponent implements OnInit {
           break;
       }
 
-      (this.persons < 0) ? this.persons = 0 : '';
+      (this.persons < 1) ? this.persons = 1 : '';
   }
 }
