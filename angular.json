@@ -146,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "myMenu-groupe3"
+  "defaultProject": "myMenu-groupe3",
+  "cli": {
+    "analytics": false
+  }
 }

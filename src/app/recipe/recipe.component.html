@@ -1,0 +1,42 @@
+<div class="container-principal">
+    <div class="bloc bloc_recipe bg-whiteBackground">
+        <h1>Pavés de saumon au four</h1>
+        <img src="" alt="">
+        <div class="details">
+            <div class="col col_scale">
+                <div class="scale">
+                    <button (click)="changePersons('down')" class="primary-button square-button">-</button>
+                    <div class="square-number">{{ persons }}</div>
+                    <button (click)="changePersons('up')" class="primary-button square-button">+</button>
+                </div>
+                <span class="text">personne(s)</span>
+            </div>
+            <div class="col col_difficulty">
+                <img src="assets/static/icons/difficulty-icon.svg" width="30px" height="30px" alt="">
+                <span class="text">Très facile</span>
+            </div>
+            <div class="col col_time">
+                <span class="duration">30</span>
+                <span class="text">minutes(s)</span>
+            </div>
+        </div>
+    </div>
+    <div class="bloc bloc_ingredients bg-whiteBackground">
+        <h2>Ingrédients</h2>
+        <ul class="ingredients__list">
+            <li><strong>2</strong> <span>Pavés de saumon</span></li>
+            <li><strong>1</strong> <span>Citron</span></li>
+            <li><strong>1</strong> <span>Verre de vin blanc</span></li>
+            <li><strong>1</strong> <span>Gros oignon blanc</span></li>
+            <li><span>Huile d'olive</span></li>
+            <li><span>Poivre</span></li>
+            <li><span>Sel</span></li>
+        </ul>
+    </div>
+    <div class="bloc bloc_steps bg-whiteBackground">
+        <h2>Étapes de la recette</h2>
+        <div class="steps__list">
+            <recipe-step *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]" [step]="number"></recipe-step>
+        </div>
+    </div>
+</div>
