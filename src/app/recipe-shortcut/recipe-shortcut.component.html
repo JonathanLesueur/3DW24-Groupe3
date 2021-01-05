@@ -1,10 +1,10 @@
-<div (click)="goToRecipe(recipeId)" class="recipe-shortcut">
+<div [routerLink]="['/recipe', recipe.id]" class="recipe-shortcut">
     <div class="date">
         <span class="day">06</span>
         <span class="month">Novembre</span>
     </div>
     <div class="infos">
-        <span class="title">Lorem ipsum dolor sit amet</span>
-        <span class="details">Préparation : x min   Difficulté :  1</span>
+        <span class="title">{{ recipe.name }}</span>
+        <span class="details">Préparation : {{ recipe.duration }} min, Difficulté :  {{ recipe.difficulty.name }}</span>
     </div>
 </div>

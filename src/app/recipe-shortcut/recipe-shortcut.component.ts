@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { Recipe } from '../recipe';
 
 @Component({
   selector: 'recipe-shortcut',
@@ -8,14 +9,10 @@ import { Router } from '@angular/router';
 })
 export class RecipeShortcutComponent implements OnInit {
 
-    @Input() recipeId: number;
+    @Input() recipe: Recipe;
 
     constructor(private router: Router) { }
 
   ngOnInit(): void {}
-
-  goToRecipe(value: number): void {
-    this.router.navigateByUrl('/recipe/'+ value);
-  }
 
 }

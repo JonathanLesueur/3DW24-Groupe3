@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from '../recipe.service';
+import { Recipe }  from '../recipe';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  recipes: Recipe[];
+
+  constructor(private recipeService: RecipeService) { }
+
+  getRecipes(): void {
+      this.recipeService.getRecipes().subscribe(recipes => this.recipes = recipes);
+  }
 
   ngOnInit(): void {
+      this.getRecipes();
   }
 
 }

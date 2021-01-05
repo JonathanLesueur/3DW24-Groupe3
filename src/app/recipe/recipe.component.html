@@ -1,6 +1,6 @@
 <div class="container-principal">
     <div class="bloc bloc_recipe bg-whiteBackground">
-        <h1>Pavés de saumon au four</h1>
+        <h1>{{ recipe.name }}</h1>
         <div class="picture">
             <img src="assets/static/pics/pave-saumon.jpg" alt="">
         </div>
@@ -15,10 +15,10 @@
             </div>
             <div class="col col_difficulty">
                 <img src="assets/static/icons/difficulty-icon.svg" width="30px" height="30px" alt="">
-                <span class="text">Très facile</span>
+                <span class="text">{{ recipe.difficulty.name }} {{ recipe.difficulty.level }}</span>
             </div>
             <div class="col col_time">
-                <span class="duration">30</span>
+                <span class="duration">{{ recipe.duration }}</span>
                 <span class="text">minutes(s)</span>
             </div>
         </div>

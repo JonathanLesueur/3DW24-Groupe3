@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Recipe } from '../recipe';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe',
@@ -8,14 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RecipeComponent implements OnInit {
 
-    public recipeId: number = 0;
+    public recipe: Recipe;
     public persons: number = 1;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-        const currentId = this.route.snapshot.paramMap.get('id');
-        (!isNaN(Number(currentId))) ? this.recipeId = Number(currentId) : ''; 
+        const currentId = Number(this.route.snapshot.paramMap.get('id'));
+        (!isNaN(currentId)) ? this.recipe = this.recipeService.getRecipeById(currentId) : '';
   }
 
   changePersons(type: String): void {
