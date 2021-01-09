@@ -4,16 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
+import { NewRecipeComponent } from './new-recipe/new-recipe.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/index', pathMatch: 'full' },
     { path: 'index', component: IndexComponent },
-    { path: 'my-lists', component: RecipeComponent },
     { path: 'recipe/:id', component: RecipeComponent },
     { path: 'new-list', component: IngredientsComponent },
-    { path: 'my-recipes', component: RecipeComponent },
-    { path: 'search-advanced', component: RecipeComponent },
-    { path: 'login', component: RecipeComponent }
+    { path: 'new-recipe', component: NewRecipeComponent }
 ];
 
 @NgModule({

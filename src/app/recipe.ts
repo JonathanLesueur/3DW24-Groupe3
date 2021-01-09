@@ -1,14 +1,17 @@
-import { Ingredient } from './ingredient';
-import { RecipeStep } from './recipe-step';
-
 export interface Recipe {
-    id: number,
+    _id?: string,
+    group?: number,
     name: string,
-    difficulty: {
-        level: number,
-        name: string
-    },
-    duration: number,
-    ingredients?: Array<Ingredient>,
-    steps?: Array<RecipeStep>
+    difficulty?: number,
+    duration?: number,
+    serving: number,
+    deletedAt?: number,
+    createdAt?: string,
+    updatedAt?: string,
+    type: string,
+    url?: string,
+    details?: {
+        ingredients?: Array<Object>,
+        instructions?: Array<Object>
+    }
 }

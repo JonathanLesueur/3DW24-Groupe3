@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,13 @@ import { ListShortcutComponent } from './list-shortcut/list-shortcut.component';
 import { RecipeStepComponent } from './recipe-step/recipe-step.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import { NewRecipeComponent } from './new-recipe/new-recipe.component';
+import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
+
+registerLocaleData(localeFr);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +34,16 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
     ListShortcutComponent,
     RecipeStepComponent,
     IngredientsComponent,
+    NewRecipeComponent,
+    RecipeSearchComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [{provide: localeFr, useValue: 'fr'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

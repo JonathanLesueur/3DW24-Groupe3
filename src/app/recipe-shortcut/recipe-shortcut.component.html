@@ -1,10 +1,13 @@
-<div [routerLink]="['/recipe', recipe.id]" class="recipe-shortcut">
+<div [routerLink]="['/recipe', recipe._id]" class="recipe-shortcut">
     <div class="date">
-        <span class="day">06</span>
-        <span class="month">Novembre</span>
+        <span class="day">{{  recipe.createdAt | date: 'dd' }}</span>
+        <span class="month">{{  recipe.createdAt | date: 'MMMM' : '' : 'fr_FR'}}</span>
     </div>
     <div class="infos">
         <span class="title">{{ recipe.name }}</span>
-        <span class="details">Préparation : {{ recipe.duration }} min, Difficulté :  {{ recipe.difficulty.name }}</span>
+        <span class="details">Préparation : {{ recipe.duration }} min, Portions : {{ recipe.serving }} </span>
+    </div>
+    <div class="more">
+        <span>></span>
     </div>
 </div>

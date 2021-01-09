@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class RecipeStepComponent implements OnInit {
     
-    @Input() step : number;
-    
+    @Input() instruction: { content?: string };
+    @Input() index: number;
     constructor() { }
     
     ngOnInit(): void {

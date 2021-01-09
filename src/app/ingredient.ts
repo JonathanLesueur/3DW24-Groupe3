@@ -1,4 +1,7 @@
 export interface Ingredient {
-    id: number,
-    name: string
+    _id: string,
+    name: string,
+    updatedAt: string,
+    createdAt: string,
+    deletedAt: number
 }

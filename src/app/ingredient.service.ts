@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Ingredient } from './ingredient';
 import { INGREDIENTS } from './mock-ingredients';
 import { Observable, of } from 'rxjs';
+import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,14 @@ import { Observable, of } from 'rxjs';
 
 export class IngredientService {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   getIngredients(): Observable<Ingredient[]> {
-      return of(INGREDIENTS);
+      var listIngredients = this.api.getIngredients();
+      return listIngredients;
   }
-  getIngredientById(ingredientId: number) {
-      return INGREDIENTS.find(element => element.id === ingredientId);
+  getIngredientById(ingredientId: string): Observable<Ingredient> {
+      var ingredient = this.api.getIngredientById(ingredientId);
+      return ingredient;
   }
 }

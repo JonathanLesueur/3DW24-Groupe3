@@ -2,48 +2,63 @@ import { Recipe } from './recipe';
 
 export const RECIPES: Recipe[] = [
     {
-        id: 1,
+        _id: "1",
+        group: 3,
         name: "Pavé de saumon",
-        difficulty: {
-            level: 1,
-            name: "Très facile"
-        },
-        duration: 20
+        difficulty: 1,
+        duration: 20,
+        serving: 1,
+        type: 'url',
+        deletedAt: -1,
     },
     {
-        id: 2,
-        name: "Tagliatelles aux champignons",
-        difficulty: {
-            level: 1,
-            name: "Très facile"
-        },
-        duration: 15
+        _id: "2",
+        group: 3,
+        name: "Pavé de saumon",
+        difficulty: 1,
+        duration: 20,
+        serving: 1,
+        type: 'url',
+        deletedAt: -1,
     },
     {
-        id: 3,
-        name: "Burger d'agneau",
-        difficulty: {
-            level: 2,
-            name: "Normale"
-        },
-        duration: 40
+        _id: "3",
+        group: 3,
+        name: "Pavé de saumon",
+        difficulty: 1,
+        duration: 20,
+        serving: 1,
+        type: 'url',
+        deletedAt: -1,
     },
     {
-        id: 4,
-        name: "Chou rouge aux marrons",
-        difficulty: {
-            level: 2,
-            name: "Normale"
-        },
-        duration: 60
+        _id: "4",
+        group: 3,
+        name: "Pavé de saumon",
+        difficulty: 1,
+        duration: 20,
+        serving: 1,
+        type: 'url',
+        deletedAt: -1,
     },
     {
-        id: 5,
-        name: "Nouilles sautées",
-        difficulty: {
-            level: 1,
-            name: "Facile"
-        },
-        duration: 15
+        _id: "5",
+        group: 3,
+        name: "Pavé de saumon",
+        difficulty: 1,
+        duration: 20,
+        serving: 1,
+        type: 'url',
+        deletedAt: -1,
+    },
+    {
+        _id: "6",
+        group: 3,
+        name: "Pavé de saumon",
+        difficulty: 1,
+        duration: 20,
+        serving: 1,
+        type: 'url',
+        deletedAt: -1,
     }
 ]

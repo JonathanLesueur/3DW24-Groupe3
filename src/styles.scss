@@ -1,24 +1,24 @@
 $breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1400px
 );
 
 $colors: (
-    mainBackground: #F4F5FA,
-    primaryBackground: #FFFFFF,
-    whiteBackground: #FFFFFF,
-    primaryHover: #e4e4e4,
-    primaryColor: #7AC4E3,
-    secondaryColor: #111B34,
-    thirdColor: #1F3260,
-    whiteText: #FFFFFF,
-    blackText: #000000,
-    grayText: #868686,
-    blueText: #3FA9D7
+mainBackground: #F4F5FA,
+primaryBackground: #FFFFFF,
+whiteBackground: #FFFFFF,
+primaryHover: #e4e4e4,
+primaryColor: #7AC4E3,
+secondaryColor: #111B34,
+thirdColor: #1F3260,
+whiteText: #FFFFFF,
+blackText: #000000,
+grayText: #868686,
+blueText: #3FA9D7
 );
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -92,7 +92,7 @@ body  {
 .container-principal {
     display: flex;
     flex-direction: column;
-
+    
     @include for-breakpoint(xl) {
         flex-direction: row;
         flex-wrap: wrap;
@@ -123,6 +123,12 @@ body  {
     border: none;
     cursor: pointer;
     border-radius: 7px;
+    transition: background-color .2s ease;
+    
+    &:hover {
+        background-color: color(thirdColor);
+        transition: background-color .2s ease;
+    }
 }
 
 .square-button {
@@ -132,12 +138,13 @@ body  {
     padding: 0;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
     display: block;
     font-weight: bold;
     color: color(blueText);
     text-transform: uppercase;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 h1 {
@@ -150,10 +157,61 @@ h2 {
     font-size: 18px;
 }
 
+h3 {
+    line-height: 18px;
+    font-size: 16px;
+}
+
 .list-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     overflow-y: scroll;
     height: 350px;
+}
+
+.div_title {
+    background-color: color(primaryColor);
+    width: 100%;
+    h1 {
+        color: color(whiteText);
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+.col_scale {
+    text-align: center;
+    .scale {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .square-number {
+            border: 1px solid #000000;
+            border-radius: 7px;
+            text-align: center;
+            line-height: 30px;
+            height: 30px;
+            width: 30px;
+            margin: 0px 10px;
+        }
+    }
+}
+
+label {
+    display: block;
+    width: 100%;
+    strong {
+        display: block;
+    }
+    input[type="text"], input[type="number"], textarea {
+        display: block;
+        width: 100%;
+        height: 30px;
+        border-radius: 7px;
+        background-color: color(mainBackground);
+        border: 1px solid color(grayText);
+        padding: 0 10px;
+    }
 }

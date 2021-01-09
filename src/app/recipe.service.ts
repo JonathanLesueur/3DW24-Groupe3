@@ -1,20 +1,36 @@
 import { Injectable } from '@angular/core';
 import { Recipe } from './recipe';
-import { RECIPES } from './mock-recipes';
 import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+import { ApiService } from './api.service';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 
 export class RecipeService {
+    
+    constructor(private api: ApiService) {};
+    
+    getRecipes(): Observable<Recipe[]> {
+        return this.api.getRecipes();
+    }
+    
+    getRecipeById(recipeId: string): Observable<Recipe> {
+        var recipe = this.api.getRecipeByid(recipeId);
+        return recipe;
+    }
+    
+    searchByName(term: string): Observable<Recipe[]> {
+        return this.api.getRecipes();
+    }
 
-  constructor() { }
-
-  getRecipes(): Observable<Recipe[]> {
-      return of(RECIPES);
-  }
-  getRecipeById(recipeId: number) {
-      return RECIPES.find(element => element.id === recipeId);
-  }
+    public handleError<T>(operation = 'operation', result?: T) {
+        return (error: any): Observable<T> => {
+                    
+            console.error(error);
+            return of(result as T);
+        };
+    }
 }
+      
