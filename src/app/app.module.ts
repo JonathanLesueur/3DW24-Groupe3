@@ -19,6 +19,8 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { NewRecipeComponent } from './new-recipe/new-recipe.component';
 import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
+import { LastRecipesComponent } from './last-recipes/last-recipes.component';
+import { LastRecipeShortcutComponent } from './last-recipe-shortcut/last-recipe-shortcut.component';
 
 registerLocaleData(localeFr);
 
@@ -36,6 +38,8 @@ registerLocaleData(localeFr);
     IngredientsComponent,
     NewRecipeComponent,
     RecipeSearchComponent,
+    LastRecipesComponent,
+    LastRecipeShortcutComponent,
   ],
   imports: [
     BrowserModule,

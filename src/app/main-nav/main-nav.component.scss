@@ -39,4 +39,19 @@
             }
         }
     }
+
+    .forward {
+        margin-top: 20px;
+        background-color: color(primaryColor);
+        font-weight: 600;        
+        text-decoration: underline;
+        a {
+            color: color(blackText);
+
+            &:hover, &.active {
+                background: color(thirdColor);
+                color: color(whiteText);
+            }
+        }
+    }
 }
